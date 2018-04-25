@@ -1,0 +1,28 @@
+<!--
+ Copyright © Tue Apr 24 2018 Shermal Hashan Silva <hashan.silva@gmail.com>
+ All rights reserved. All information contained herein is, and remains
+ the property of the developer.
+ Dissemination of this information or reproduction of this material
+ is strictly forbidden unless prior written permission is obtained
+ from the developer.
+-->
+
+<div ej-listview id="listview" e-datasource="$ctrl.phones" e-renderTemplate="$ctrl.renderTemplate" e-enablefiltering="$ctrl.enableFilter">
+    <div class="row">
+        <div class="col-lg-2 text-center">
+            <a class="thumb" href="#/phones/{{>id}}">
+                <img class="main-image" src="{{>imageUrl}}" alt="{{>name}}" />
+            </a>
+        </div>
+        <div class="col-lg-10">
+            <a class="phone-name" href="#/phones/{{>id}}">{{>name}}</a>
+            <p class="phone-summary">{{>snippet}}</p>
+        </div>
+    </div>
+</div>
+
+<div>
+    <h6>
+        <span style="font-style: italic; font-weight: normal; margin: 5px; text-align: center">Number of Phones : {{$ctrl.phones.length}}</span>
+    </h6>
+</div>
